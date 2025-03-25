@@ -1,0 +1,33 @@
+% COMPILE PELO PDFLATEX (COMPILADOR PADRÃO)
+\documentclass[12pt, a4paper]{book} 
+\input{Structure} % Novos pacotes, comandos, etc, adicione no arquivo Structure.tex
+
+% Troque a cor da edição, tamanho das fontes, etc no arquivo Structure.tex
+
+% Comandos referentes a Edição (altere aqui que serão alterados automaticamente nos lugares em que são apresentados no pdf - ajuste apenas os valores de espaçamento e posicionamento na seção em que aparecem, caso seja necessário)
+\newcommand{\NumeroEdicao}{17}
+\newcommand{\ColecaoEdicao}{IV}
+\newcommand{\DataEdicao}{Agosto 2022}
+
+\begin{document}
+
+    \input{Capa/Capa}
+    \input{Folha_Rosto/Folha_Rosto}
+    \input{Sumario/Sumario}
+    \input{Equipe/Equipe}
+    \input{Artigos/Artigo1} % Use essa linha de comando para adicionar novos artigos (recomenda-se criar um arquivo .tex para cada artigo)
+    \input{Artigos/Artigo2}
+    \input{Artigos/Artigo3}
+    \input{Referencias/Referencias}
+    \input{Tirinha/Tirinha}
+    \input{ContraCapa/ContraCapa}
+    
+\end{document}
+
+% NOTAS
+
+% Em certos momentos de compilação você pode obter "Package multicol Warning" para notas de rodapé ou figuras, verifique a disposição do seu texto no PDF e ignore esses erros caso não afetem o layout da edição nem a estética de acordo com a sua preferência. A mesma recomendação vale para mensagens de erros parecidas com "Underfull \hbox (badness 10000) in paragraph at lines X--X".
+
+% CUIDADO COM IMAGENS GRANDES. Podem gerar conflitos com a versão gratuita do Overleaf devido a demora para compilar tais imagens com o documento.
+
+% Comandos LaTeX desenvolvidos por Sanderson Carlos Ribeiro (e-mail: San.Car.Oficial@gmail.com) com o auxílio do ChatGPT. Design da Edição por Vítor Hugo Ribeiro (e-mail: vitorhibeiro@gmail.com) e Alexandre Alabora (e-mail: alexandre.alabora@gmail.com). Com contribuições de Luiz Felipe Demétrio (e-mail: demetrio.luizfelipe.fis@gmail.com).

@@ -1,0 +1,30 @@
+% SEGUNDO ARTIGO
+\newcommand{\titletwo}{Título Principal - Artigo 2} 
+\mytitle{\titletwo}    
+\addchaptersummary{\titletwo}{Sumario/Figs_Sumario/FigArtigo2.jpg}{Tintim é o protagonista de As Aventuras de Tintim, criada pelo quadrinista belga Hergé que estreou em 10 de janeiro de 1929.}{Tintim} 
+
+\newcommand{\refarticletwo}{\titletwo} 
+
+\begin{multicols}{2}
+
+Para adicionar uma figura no \textit{layout} da página inteira, ou seja em uma coluna, basta fechar o ambiente \texttt{multicols} temporariamente. Use o comando \texttt{\textbackslash par \textbackslash noindent} para garantir que a imagem fique corretamente alinhada e evitar espaçamentos indesejados quando saímos do ambiente \texttt{multicols} e em seguida insira a figura com o ambiente \texttt{figure}. Exemplo a seguir.
+
+\end{multicols}
+
+\par\noindent
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{Figuras/Artigo2/Tintim.jpg}
+    \caption{Tintim e seu inseparável amigo de 4 patas Bilu. Fonte: \href{https://br.pinterest.com/}{Pinterest}.}
+    \label{fig:tintim}
+\end{figure}
+
+
+\begin{multicols}{2}
+Para voltar ao \textit{layout} de duas colunas reinicie o ambiente \texttt{\textbackslash begin\{multicols\}\{2\}}. 
+
+\lipsum[1-3]
+
+\authorinfo{Tintim}{link lattes ou orcid}
+
+\end{multicols}

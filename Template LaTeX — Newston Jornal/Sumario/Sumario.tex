@@ -1,0 +1,88 @@
+\newpage
+\thispagestyle{noheader}
+% OBS: Coloque sempre o que você quer deixar de fundo na página como primeiro comando
+% Adicione o TikZ para desenhar a linha vertical
+\begin{tikzpicture}[remember picture, overlay]
+    \draw[line width=10.8cm, base] ($(current page.north east) - (0,0)$) -- ($(current page.south east) - (0,0)$);
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \node[shift={(-0.2, 2.2)}, anchor=center] at (4,-1) {\usefont{T1}{qag}{b}{n} {\myfontsizeSdeSumario S}\myfontsizeSumario umário};
+  \node[shift={(-2.6, 0.2)}, anchor=center] at (4,-1) {\sffamily\bfseries\myfontsizeSumarioData \DataEdicao};
+\end{tikzpicture}
+
+% Adiciona um espaço vertical negativo para mover o sumário para cima
+\vspace*{-0.2cm} % Ajuste este valor conforme necessário para que caibam mais itens de sumário numa mesma página
+
+% Ajustar a largura do sumário usando adjustbox
+\makebox[0pt][l]{
+    \begin{adjustbox}{valign=t,minipage={.8\textwidth},margin={-3.5em,0pt}}
+        {\myfontsizeSumarioTitulos\sffamily
+       \tableofcontents}
+    \end{adjustbox}
+}
+
+%LOGO, NOME DO JORNAL e outras informações do canto direito da página de Sumário
+%Edite a imagem em um editor gráfico antes de incluí-la no documento LaTeX. Ferramentas como GIMP, Inkscape, ou Photoshop podem ser usadas para alterar a cor da imagem (use o arquivo svg da pasta Figs_Folha_Rosto).
+% Altere a cor e/ou tamanho no comando \myfontsizeNewstonSumario \myfontsizeJornalSumarioECC em Structure.tex caso queira outra que não seja a da edição
+\begin{tikzpicture}[remember picture, overlay]
+  % Adiciona a logo maçã branco
+  \node at (current page.north west) [anchor=north west, xshift=15.4cm, yshift=-0.7cm] {
+    \includegraphics[width=5.5cm]{Sumario/Figs_Sumario/Newston_Logo_Branca.png}
+  };
+   % Adiciona o texto Edições Anteriores
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-7.5cm] {
+    \parbox{20cm}{\sffamily\bfseries\myfontsizeEdAntSite ACESSE AS EDIÇÕES \\[0.4ex] ANTERIORES}
+  };
+   % Ícone site
+   \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-8.6cm] {
+    \includegraphics[width=.5cm]{Sumario/Figs_Sumario/Icone_Site.png}
+  };
+  % Site
+  \node at (current page.north west) [anchor=north west, xshift=16.9cm, yshift=-8.75cm] {
+    {\sffamily\myfontsizeEdAntSite www.newston.com.br}
+  };
+  % Ícone google drive
+  \node at (current page.north west) [anchor=north west, xshift=16.2cm, yshift=-9.3cm] {
+    \includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_GDrive.png}
+  };
+  % Pasta drive compartilhada
+  \node at (current page.north west) [anchor=north west, xshift=16.8cm, yshift=-9.5cm] {
+    {\sffamily\myfontsizeEdAntSite\textls[0]{\begingroup
+\hypersetup{urlcolor=white}  % Altera a cor do link apenas para este caso
+\href{https://drive.google.com/drive/folders/1FbL4MqIMpF6chux5QbDVhHFrDrhzHxMa?usp=drive_link}{Drive Newston}
+\endgroup}}
+  };
+  % Adiciona o texto Fale Conosco...
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-20.3cm] {
+    \parbox{20cm}{\sffamily\bfseries\myfontsizeEdAntSite FALE CONOSCO POR \\[0.8ex] NOSSAS REDES \\[0.8ex] SOCIAIS}
+  };
+  % Ícone Insta
+   \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-21.8cm] {\href{https://www.instagram.com/newstonjornal/}{\includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_Insta.png}}
+  };
+  % Ícone Face
+   \node at (current page.north west) [anchor=north west, xshift=17.25cm, yshift=-21.8cm] {\href{https://www.facebook.com/newstonjornal}{\includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_Facebook.png}}
+  };
+  % Ícone X
+   \node at (current page.north west) [anchor=north west, xshift=18.25cm, yshift=-21.8cm] {\href{https://x.com/newstonjornal}{\includegraphics[width=.6cm]{Sumario/Figs_Sumario/Icone_X.png}}
+  };
+  % Usuario
+  \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-22.7cm] {
+    {\sffamily\myfontsizeUsuario \textls[100]{@NEWSTONJORNAL}}
+  };
+  % Ícone e-mail
+   \node at (current page.north west) [anchor=north west, xshift=16.25cm, yshift=-23.3cm] {
+    \includegraphics[width=.5cm]{Sumario/Figs_Sumario/Icone_Email.png}
+  };
+  % e-mail
+  \node at (current page.north west) [anchor=north west, xshift=16.8cm, yshift=-23.38cm] {
+    {\sffamily\myfontsizeEdAntSite \textls[0]{\begingroup
+\hypersetup{urlcolor=white}  % Altera a cor do link apenas para este caso
+\href{mailto:newstonjornal@gmail.com}{newstonjornal@gmail.com}
+\endgroup}}
+  };
+  % Adiciona a logo da UEM branco
+  \node at (current page.north west) [anchor=north west, xshift=16.2cm, yshift=-26.7cm] {
+    \includegraphics[width=3.7cm]{Capa/Figuras_Capa/UEM_Logo_Modelo_Branco.png}
+  };
+\end{tikzpicture}
